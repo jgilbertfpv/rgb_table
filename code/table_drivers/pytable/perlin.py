@@ -99,6 +99,9 @@ while not done:
                 if mode == 1: mode = 2
                 elif mode == 2: mode = 3
                 elif mode == 3: mode = 1
+            if event.key == pygame.K_s:
+                octave -= 1
+                octave = max(octave, 1)        
 
             print "Octave: %d Scale: %f Min: %f Max: %f Mode: %d" % (octave, scale, mmin, mmax, mode)
 
